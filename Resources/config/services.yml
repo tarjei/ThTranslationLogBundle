@@ -1,0 +1,18 @@
+parameters:
+    th_translation_log.decorator.class: TH\TranslationLogBundle\TranslatorDecorator
+    translation.loader.fallback.class: TH\TranslationLogBundle\FallbackLoader
+    th_translation_log.file: %kernel.logs_dir%/translation-misses.log
+services:
+    th_translation_log.logger:
+        class: 'Symfony\Bridge\Monolog\Logger'
+        arguments: [ "th_translation_log.logger" ]
+        calls:
+          - [ pushHandler, [ @th_translation_log.logger_handler ] ]
+    th_translation_log.log_formatter:
+        class: Monolog\Formatter\LineFormatter
+        arguments: [ "%%message%%\n" ]
+    th_translation_log.logger_handler:
+        class: Monolog\Handler\StreamHandler
+        arguments: [ "%th_translation_log.file%" ]
+        calls:
+          - [ setFormatter, [@th_translation_log.log_formatter] ]

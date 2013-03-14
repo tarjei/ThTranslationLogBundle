@@ -1,0 +1,13 @@
+{
+    "name": "th/translation-log-bundle",
+    "authors": [
+        {
+            "name": "Tarjei Huse",
+            "email": "tarjei.huse@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "symfony/symfony": ">=2.1"
+    }
+}
