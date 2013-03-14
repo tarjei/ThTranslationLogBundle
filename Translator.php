@@ -12,15 +12,6 @@ use Symfony\Bundle\FrameworkBundle\Translation\Translator as BaseTranslator;
 class Translator extends BaseTranslator
 {
 
-    public function setFallbackLocale($locales)
-    {
-        $this->container->get('logger')->info("setFallbackLocale: $locales"
-         . $this->container->get('request')->getUri()
-        );
-        parent::setFallbackLocale(array("fallback"));
-    }
-
-
     protected function loadCatalogue($locale)
     {
         $this->container->get('logger')->info("loadCatalogue: $locale" . $this->container->get('request')->getUri());
