@@ -1,5 +1,6 @@
 {
     "name": "th/translation-log-bundle",
+    "description": "Find those pesky dynamic translation strings",
     "authors": [
         {
             "name": "Tarjei Huse",
@@ -7,6 +8,8 @@
         }
     ],
     "minimum-stability": "dev",
+    "type": "symfony-bundle",
+    "license": "Apache-2.0",
     "require": {
         "symfony/symfony": ">=2.1"
     }
