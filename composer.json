@@ -10,6 +10,11 @@
     "minimum-stability": "dev",
     "type": "symfony-bundle",
     "license": "Apache-2.0",
+    "autoload": {
+        "psr-0": { "TH\\TranslationLogBundle": "" }
+    },
+    "target-dir": "TH/DiExtraBundle",
+
     "require": {
         "symfony/symfony": ">=2.1"
     }
