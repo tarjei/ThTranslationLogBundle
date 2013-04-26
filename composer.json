@@ -13,7 +13,7 @@
     "autoload": {
         "psr-0": { "TH\\TranslationLogBundle": "" }
     },
-    "target-dir": "TH/DiExtraBundle",
+    "target-dir": "TH/TranslationLogBundle",
 
     "require": {
         "symfony/symfony": ">=2.1"
